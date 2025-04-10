@@ -9,3 +9,8 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
+
+app.post("/users", (req, res) => {
+  const user = res.body;
+  res.json({ message: "User created!", user });
+});
